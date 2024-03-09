@@ -1,0 +1,41 @@
+:root {
+  --color-bg-close: #e9e4ff;
+  --color-bg: #fdfdfd;
+  --color-fg: #762cff;
+  --color-input-bg: #cac5ff;
+
+  --glow-radius: 10px;
+}
+
+.dark {
+  --color-bg-close: #1a1b1e;
+  --color-bg: #0f0e0e;
+  --color-fg: #c0c3ff;
+  --color-input-bg: #282b32;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  transition: filter 250ms ease;
+  font-weight: bold;
+
+  &:hover {
+    filter: drop-shadow(0 0 var(--glow-radius) var(--color-fg));
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+
+  transition: background-color 1s ease;
+
+  :is(.dark &) {
+    transition-duration: 250ms;
+  }
+}

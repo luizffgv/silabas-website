@@ -1,0 +1,33 @@
+.container {
+  max-width: 100%;
+
+  .label {
+    font-weight: bold;
+    margin-left: 1ch;
+  }
+
+  .input {
+    background-color: var(--color-input-bg);
+    border-radius: calc(infinity * 1px);
+    border: none;
+    color: inherit;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    height: 2em;
+    margin-top: 0.5em;
+    max-width: 100%;
+    padding-left: 1ch;
+    transition: background-color 250ms ease;
+  }
+
+  .input:focus {
+    box-shadow: 0 0 var(--glow-radius) var(--color-fg);
+    outline: 2px solid var(--color-fg);
+  }
+
+  .input::placeholder {
+    color: inherit;
+    opacity: 0.5;
+  }
+}

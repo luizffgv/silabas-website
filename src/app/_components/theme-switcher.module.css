@@ -1,0 +1,19 @@
+.button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+
+  .icon {
+    font-size: 32px;
+    transition: rotate 250ms ease;
+  }
+
+  .icon:is(:global(.dark) .icon) {
+    rotate: 180deg;
+  }
+}

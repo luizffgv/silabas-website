@@ -1,0 +1,8 @@
+.separator-wrapper {
+  opacity: 1;
+  transition: opacity 250ms ease;
+}
+
+.separator-wrapper[data-empty="true"] {
+  opacity: 0;
+}

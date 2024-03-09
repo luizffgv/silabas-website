@@ -1,0 +1,15 @@
+.separator {
+  color: var(--color-fg);
+  transition: opacity 250ms ease;
+
+  .separated {
+    filter: drop-shadow(0 0 var(--glow-radius) var(--color-fg));
+    font-size: 1.5em;
+    font-weight: bold;
+    overflow-wrap: break-word;
+  }
+}
+
+.separator[data-empty="true"] {
+  opacity: 0;
+}
