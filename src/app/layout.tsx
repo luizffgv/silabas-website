@@ -3,6 +3,7 @@ import { Quicksand } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
 import ThemeSwitcher from "./_components/theme-switcher";
+import { Suspense } from "react";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -35,7 +36,9 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeSwitcher></ThemeSwitcher>
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main}>
+          <Suspense>{children}</Suspense>
+        </main>
         <footer className={styles.footer}>
           <p>
             Feito por{" "}
