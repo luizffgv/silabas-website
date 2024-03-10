@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@luizffgv/silabas": "github:luizffgv/silabas-js#ce9d91c",
+    "@luizffgv/silabas": "github:luizffgv/silabas-js#e6f455bfc5b2a8b820bb0c2d2257d2ffecfd8d85",
     "next": "14.1.3",
     "react": "^18",
     "react-dom": "^18"
