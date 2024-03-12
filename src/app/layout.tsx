@@ -4,6 +4,7 @@ import "./globals.css";
 import styles from "./layout.module.css";
 import ThemeSwitcher from "./_components/theme-switcher";
 import { Suspense } from "react";
+import CanvasBackground from "./_components/canvas-background";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -35,29 +36,32 @@ export default function RootLayout({
         <script src="initial-theme-applier.js"></script>
       </head>
       <body>
-        <ThemeSwitcher></ThemeSwitcher>
-        <main className={styles.main}>
-          <Suspense>{children}</Suspense>
-        </main>
-        <footer className={styles.footer}>
-          <p>
-            Feito por{" "}
-            <a href="https://github.com/luizffgv" target="_blank">
-              luizffgv
-            </a>{" "}
-            utilizando{" "}
-            <a href="https://github.com/luizffgv/silabas-js" target="_blank">
-              @luizffgv/silabas
-            </a>
-            <br />
-            <a
-              href="https://github.com/luizffgv/silabas-website"
-              target="_blank"
-            >
-              Veja o código aqui
-            </a>
-          </p>
-        </footer>
+        <CanvasBackground></CanvasBackground>
+        <div style={{ isolation: "isolate" }}>
+          <ThemeSwitcher></ThemeSwitcher>
+          <main className={styles.main}>
+            <Suspense>{children}</Suspense>
+          </main>
+          <footer className={styles.footer}>
+            <p>
+              Feito por{" "}
+              <a href="https://github.com/luizffgv" target="_blank">
+                luizffgv
+              </a>{" "}
+              utilizando{" "}
+              <a href="https://github.com/luizffgv/silabas-js" target="_blank">
+                @luizffgv/silabas
+              </a>
+              <br />
+              <a
+                href="https://github.com/luizffgv/silabas-website"
+                target="_blank"
+              >
+                Veja o código aqui
+              </a>
+            </p>
+          </footer>
+        </div>
       </body>
     </html>
   );
